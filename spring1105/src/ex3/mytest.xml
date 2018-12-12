@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 인자값이 1개인 생성자 호출 -->
+	<bean id="myTest" class="ex3.MyTest">
+		<constructor-arg>
+			<value>50000</value>
+		</constructor-arg>
+	</bean>
+
+	<!-- 인자값이 2개인 생성자를 각각 호출해보는 bean을 2개 만들어서
+			출력 테스트를 해보기 -->
+	<bean id="myTest2" class="ex3.MyTest">
+		<constructor-arg value="50000" />
+		<constructor-arg value="만원만 주십쇼"/>
+	</bean>
+	
+	<bean id="myTest3" class="ex3.MyTest">
+		<constructor-arg value="돈좀줘봐" type="String"/>
+		<constructor-arg value="1000" type="int"/>
+	</bean>			
+</beans>
